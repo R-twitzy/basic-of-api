@@ -1,13 +1,13 @@
+const { request, response } = require("express")
 const express = require("express")
 const app = express()
 
-// set to read a request from JSON format
-
+// set to read request data from Json format
 app.use(express.json())
-// JSON is String
+// fyi: Json is string
 
 app.post("/uang", (request, response) => {
-    let uang = [100000, 50000, 20000, 10000, 5000, 2000, 1000, 500]
+    let uang = [100000, 50000, 20000, 10000, 5000, 2000, 1000, 500, 200, 100]
     let butuh = request.body.butuh
     let hasil = []
 
